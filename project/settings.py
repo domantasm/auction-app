@@ -43,7 +43,6 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    # 'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -114,17 +113,16 @@ USE_TZ = True
 
 LOGIN_URL = '/auction/login/'
 
-# STATICFILES_DIRS = [
-#     os.path.join(BASE_DIR, 'auction/static/')
-# ]
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'auction/static/')
+]
 
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+//STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 STATIC_URL = '/static/'
-# STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
 INTERNAL_IPS = ['127.0.0.1']
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
@@ -136,4 +134,3 @@ EMAIL_USE_TLS = True
 EMAIL_PORT = 587
 EMAIL_HOST_USER = 'qmul.auction@gmail.com'
 EMAIL_HOST_PASSWORD = '@gjil39gu490w'
-
